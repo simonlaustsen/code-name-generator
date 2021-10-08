@@ -1,6 +1,6 @@
 # Code Name Generator
 
-A Code Name Generator for generating secret names for various projects.
+A simple React app generating secret code names for various projects.
 
 ## Available Scripts
 
