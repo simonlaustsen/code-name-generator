@@ -1,38 +1,88 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #a960ee, #ff333d, #ff9090, #ffcb57);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+section {
+  padding: 48px 48px 32px;
+  background: rgba(252, 252, 252, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header p {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span.code-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+  padding: 48px 48px 48px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  display: inline-block;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  background-color: #a960ee;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #9b4ce6
+}
+
+button:active {
+  background-color: #9b4ce6;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  transform: translateY(2px);
 }
